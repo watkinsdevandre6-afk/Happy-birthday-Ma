@@ -4,18 +4,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday, Ma ❤️</title>
+<meta name="theme-color" content="#fff0f4">
+<title>Happy 42nd Birthday, Ma! ❤️</title>
 
 <style>
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: Georgia, 'Times New Roman', serif;
-  color: #683b4c;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #69394c;
   text-align: center;
-  background: linear-gradient(135deg, #fff0f3, #ffe0e8, #fff7ed);
+  background: linear-gradient(135deg, #fff0f3, #f9dce6, #fff8ed);
   overflow-x: hidden;
 }
 
@@ -31,80 +34,130 @@ body {
   position: absolute;
   bottom: -40px;
   animation: floatUp linear forwards;
-  opacity: .7;
+  opacity: .75;
 }
 
 @keyframes floatUp {
-  to { transform: translateY(-115vh) rotate(30deg); opacity: 0; }
+  to {
+    transform: translateY(-115vh) rotate(35deg);
+    opacity: 0;
+  }
 }
 
 main {
   position: relative;
   z-index: 1;
-  width: min(92%, 720px);
-  margin: 35px auto;
-  padding: 35px 22px;
-  border: 1px solid #f5c4d1;
+  width: min(92%, 740px);
+  margin: 30px auto;
+  padding: 36px 24px;
+  border: 1px solid #efc0d0;
   border-radius: 28px;
-  background: rgba(255,255,255,.83);
+  background: rgba(255, 255, 255, .88);
   box-shadow: 0 15px 45px #b65d7a20;
 }
 
-.flower { font-size: 38px; }
-
-h1 {
-  color: #b54469;
-  font-size: clamp(2.3rem, 8vw, 4rem);
-  margin: 12px 0;
+.flower {
+  font-size: 38px;
+  letter-spacing: 8px;
 }
 
-.subtitle { font-size: 1.15rem; }
+h1 {
+  color: #ae4165;
+  font-size: clamp(2.2rem, 8vw, 3.8rem);
+  line-height: 1.15;
+  margin: 16px 0;
+}
+
+h2 {
+  color: #ae4165;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.age {
+  display: inline-block;
+  margin: 15px auto;
+  padding: 12px 22px;
+  border: 1px solid #e8b3c5;
+  border-radius: 30px;
+  background: #fff0f5;
+  color: #a43e60;
+  font-size: 1.1rem;
+}
+
+.hero-flowers {
+  font-size: 48px;
+  margin: 22px 0;
+}
 
 button {
   border: none;
   border-radius: 30px;
-  padding: 14px 24px;
-  margin: 10px 5px;
-  background: #b54469;
+  padding: 14px 23px;
+  margin: 9px 5px;
+  background: #ae4165;
   color: white;
+  font-family: inherit;
   font-size: 1rem;
   cursor: pointer;
   transition: transform .2s, background .2s;
+  box-shadow: 0 5px 14px #ae416526;
 }
 
 button:hover {
   transform: translateY(-2px);
-  background: #913653;
+  background: #87304e;
+}
+
+button:focus-visible {
+  outline: 3px solid #d88aa5;
+  outline-offset: 4px;
 }
 
 .letter {
   display: none;
   text-align: left;
   line-height: 1.9;
-  padding: 22px;
+  padding: 25px;
   margin-top: 25px;
   background: #fff6f8;
   border-radius: 20px;
-  border: 1px solid #f8d5df;
+  border: 1px solid #f3d2dd;
   animation: appear .7s ease;
 }
 
-.letter.show { display: block; }
+.letter.show {
+  display: block;
+}
+
+.letter p {
+  margin: 17px 0;
+}
 
 @keyframes appear {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .signature {
   text-align: center;
-  color: #b54469;
+  color: #ae4165;
   font-size: 1.2rem;
   font-weight: bold;
+  margin-top: 25px;
 }
 
 footer {
-  margin-top: 28px;
+  margin-top: 32px;
   font-size: .9rem;
   opacity: .8;
 }
@@ -112,7 +165,7 @@ footer {
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(68, 25, 43, .6);
+  background: rgba(68, 25, 43, .65);
   z-index: 5;
   display: flex;
   justify-content: center;
@@ -122,153 +175,296 @@ footer {
 }
 
 .popup {
-  width: min(100%, 440px);
-  padding: 32px 22px;
+  width: min(100%, 450px);
+  padding: 32px 23px;
   border-radius: 28px;
   background: #fff8fa;
+  border: 1px solid #f1c3d2;
   box-shadow: 0 20px 80px #42132840;
   animation: pop .5s ease;
 }
 
-@keyframes pop {
-  from { opacity: 0; transform: scale(.8); }
-  to { opacity: 1; transform: scale(1); }
+.popup h2 {
+  font-size: 2rem;
+  margin: 15px 0;
 }
 
-.popup h2 { color: #b54469; font-size: 2rem; }
-.popup p { line-height: 1.7; }
+.popup p {
+  line-height: 1.8;
+}
+
+.popup-emoji {
+  font-size: 53px;
+}
 
 #confetti {
   position: fixed;
   inset: 0;
+  width: 100%;
+  height: 100%;
   z-index: 10;
   pointer-events: none;
 }
 
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @media (max-width: 480px) {
-  main { padding: 28px 15px; }
-  .letter { padding: 17px; }
+  main {
+    padding: 27px 16px;
+    margin: 18px auto;
+  }
+
+  .letter {
+    padding: 18px;
+  }
+
+  .flower {
+    font-size: 30px;
+  }
+
+  .hero-flowers {
+    font-size: 39px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
 }
 </style>
 </head>
 
 <body>
-<div id="hearts"></div>
-<canvas id="confetti"></canvas>
 
+<div id="hearts" aria-hidden="true"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<!-- BIRTHDAY POP-UP -->
 <div class="modal" id="birthdayPopup">
   <div class="popup">
-    <div style="font-size:55px">🎁🎂💗</div>
+    <div class="popup-emoji">🎁🎂💗</div>
+
     <h2>Surprise, Ma!</h2>
+
+    <div class="age">✨ Cheers to 42 beautiful years! ✨</div>
+
     <p>
-      Today is all about you! Someone special deserves
-      a little reminder of how loved and appreciated she is.
+      Today is all about you, Ma! Someone very special deserves
+      a little reminder of how loved, appreciated and precious
+      she is to the people around her.
     </p>
-    <p><strong>Ready for your birthday surprise? ❤️</strong></p>
-    <button onclick="openSurprise()">Open Your Surprise 💌</button>
+
+    <p>
+      We've prepared a little something just for you.
+      Are you ready to open your birthday surprise? ❤️
+    </p>
+
+    <button onclick="openSurprise()">
+      Open Your Surprise 💌
+    </button>
   </div>
 </div>
 
+<!-- MAIN BIRTHDAY PAGE -->
 <main>
   <div class="flower">🌷 💗 🌷</div>
-  <p class="subtitle">A little something made with love, just for you</p>
 
-  <h1>Happy Birthday, Ma!</h1>
-  <p style="font-size:1.15rem">Today, we celebrate YOU. 🎂</p>
-
-  <div style="font-size:55px;margin:20px">💐🎁❤️</div>
-
-  <p>
-    You deserve all the love, happiness and beautiful blessings
-    this world has to offer.
+  <p class="subtitle">
+    A little something made with love, especially for you
   </p>
 
-  <button onclick="revealLetter()">Read Your Birthday Letter 💌</button>
-  <button onclick="celebrate()">More Birthday Magic ✨</button>
+  <h1>Happy 42nd Birthday, Ma!</h1>
 
-  <section class="letter" id="letter">
-    <h2 style="text-align:center;color:#b54469">
+  <div class="age">
+    42 years of life, love and beautiful memories 💐
+  </div>
+
+  <div class="hero-flowers">🎂 💐 🎁 ❤️</div>
+
+  <p class="subtitle">
+    Today we celebrate an amazing woman who deserves
+    all the happiness, love and blessings in the world.
+  </p>
+
+  <p>
+    Ma, today is your day. We hope this little surprise
+    puts the biggest smile on your face. 🥹❤️
+  </p>
+
+  <button onclick="revealLetter()">
+    Read Your Birthday Letter 💌
+  </button>
+
+  <button onclick="celebrate()">
+    More Birthday Magic ✨
+  </button>
+
+  <!-- FULL BIRTHDAY LETTER -->
+  <section class="letter" id="letter" aria-live="polite">
+
+    <h2 style="text-align:center">
       To Our Wonderful Ma ❤️
     </h2>
 
-    <p><strong>Happy birthday to the most amazing Ma! 🥹❤️</strong></p>
-
     <p>
-      Today is a special day because it's the day someone truly
-      wonderful was born. Ma, we want to remind you how much you
-      mean to us and how grateful we are to have you in our lives.
+      <strong>Happy birthday to the most amazing Ma! 🥹❤️</strong>
     </p>
 
     <p>
-      Thank you for your love, your care, your sacrifices, and all
-      the little things you do that sometimes go unnoticed. Thank
-      you for being someone we can count on, for the warmth you
-      bring into our lives, and for the strength you show even on
-      days when things aren't easy.
+      Today is a special day because it's the day someone truly
+      wonderful was born. Ma, we want to take this opportunity
+      to remind you how much you mean to us and how grateful we
+      are to have you in our lives.
+    </p>
+
+    <p>
+      Thank you for your love, your care, your sacrifices, and
+      all the little things you do that sometimes go unnoticed.
+      Thank you for being someone we can count on, for the warmth
+      you bring into our lives, and for the strength you show
+      even on days when things aren't easy.
+    </p>
+
+    <p>
+      As you turn 42, we celebrate not just another year of your
+      life, but the wonderful woman you are. Forty-two years of
+      memories, lessons, strength, love and experiences have
+      helped shape the incredible person we are blessed to know.
+      We hope you look back with gratitude and look forward with
+      excitement for all the beautiful things still to come.
     </p>
 
     <p>
       Ma, we pray that God continues to protect you, guide your
       steps, strengthen you, and bless you with many more years
-      filled with good health, laughter, success, and unforgettable
-      memories. May He give you the desires of your heart and remind
-      you every day that you are loved, appreciated, and never
-      taken for granted. 🙏❤️
+      filled with good health, laughter, success and unforgettable
+      memories. May He give you the desires of your heart and
+      remind you every day that you are loved, appreciated and
+      never taken for granted. 🙏❤️
+    </p>
+
+    <p>
+      Thank you for the sacrifices you make, for the care you
+      give, and for the many ways you make a difference in the
+      lives of those around you. Even when we don't always say
+      it, please know that the things you do matter more than
+      words can explain. You deserve to receive the same love
+      and kindness that you give so freely to others.
     </p>
 
     <p>
       On your birthday, we hope you take a moment to celebrate
-      yourself, because you deserve to be celebrated not just today,
-      but every single day. May the smile on your face never fade,
-      may your heart always find reasons to be happy, and may this
-      new chapter bring you closer to all the beautiful things
-      you've been praying for.
+      yourself, because you deserve to be celebrated not just
+      today, but every single day. May the smile on your face
+      never fade, may your heart always find reasons to be happy,
+      and may this new chapter bring you closer to all the
+      beautiful things you've been praying for.
     </p>
 
     <p>
-      Words will never be enough to express how much you mean to us,
-      but we hope this little surprise reminds you of just how
-      special you are.
+      May 42 be a year of peace where your worries become lighter,
+      your blessings become greater, your faith becomes stronger,
+      and your happiness becomes deeper. May new opportunities
+      find you, may beautiful memories surround you, and may you
+      always have people beside you who remind you how special
+      you are.
     </p>
 
     <p>
-      Happy birthday again, Ma! 🎂 May your day be filled with
-      love, beautiful surprises, laughter, and blessings from above.
+      Words will never be enough to express how much you mean to
+      us, but we hope this little surprise reminds you of just
+      how loved and appreciated you are. You deserve a birthday
+      filled with laughter, warm hugs, beautiful moments and
+      everything that makes your heart happy.
+    </p>
+
+    <p>
+      So today, Ma, forget about the stress for a little while,
+      enjoy your special day, smile as much as you can, and
+      remember that you are a blessing in our lives.
+    </p>
+
+    <p>
+      <strong>
+        Happy 42nd birthday again, Ma! 🎂❤️
+      </strong>
+    </p>
+
+    <p>
+      May this new year of your life be your most beautiful
+      chapter yet. May God continue to cover you with His grace,
+      surround you with His love, and bless you beyond what
+      you could ever imagine. Here's to more birthdays, more
+      laughter, more love and many more wonderful memories
+      together! 🥂💐
     </p>
 
     <p class="signature">
       With all our love,<br>
-      Dennis, Vandre & Amber ❤️
+      Dennis, Vandre &amp; Amber ❤️
     </p>
 
-    <div style="text-align:center;font-size:30px">🌷💗🌷</div>
+    <div style="text-align:center;font-size:32px">
+      🌷 💗 🌷
+    </div>
+
   </section>
 
-  <footer>Made with love, just for you ❤️</footer>
+  <footer>
+    Made with love, just for you ❤️<br>
+    Celebrating you and your beautiful 42 years.
+  </footer>
 </main>
 
 <script>
+/* OPEN THE BIRTHDAY SURPRISE */
 function openSurprise() {
   document.getElementById('birthdayPopup').style.display = 'none';
   celebrate();
 }
 
+/* REVEAL THE BIRTHDAY LETTER */
 function revealLetter() {
   const letter = document.getElementById('letter');
+
   letter.classList.add('show');
-  letter.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  letter.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+
   celebrate();
 }
 
+/* BIRTHDAY CONFETTI */
+let confettiRunning = false;
+
 function celebrate() {
+  if (confettiRunning) return;
+  confettiRunning = true;
+
   const canvas = document.getElementById('confetti');
   const ctx = canvas.getContext('2d');
 
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
+  const symbols = ['❤️', '💗', '✨', '🌸', '🎉', '💐'];
   const pieces = [];
-  const symbols = ['❤️', '💗', '✨', '🌸', '🎉'];
 
   for (let i = 0; i < 100; i++) {
     pieces.push({
@@ -288,27 +484,33 @@ function celebrate() {
     pieces.forEach(p => {
       ctx.font = p.size + 'px serif';
       ctx.fillText(p.symbol, p.x, p.y);
+
       p.y += p.speed;
       p.x += Math.sin(p.y / 30);
     });
 
     frames++;
+
     if (frames < 180) {
       requestAnimationFrame(draw);
     } else {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      confettiRunning = false;
     }
   }
 
   draw();
 }
 
+/* FLOATING HEARTS */
 function createHeart() {
   const heart = document.createElement('span');
+
   heart.className = 'heart';
   heart.textContent = ['❤️', '💗', '💕', '🌸'][
     Math.floor(Math.random() * 4)
   ];
+
   heart.style.left = Math.random() * 100 + '%';
   heart.style.fontSize = (14 + Math.random() * 20) + 'px';
   heart.style.animationDuration = (6 + Math.random() * 6) + 's';
@@ -319,6 +521,14 @@ function createHeart() {
 }
 
 setInterval(createHeart, 650);
+
+/* KEEP CONFETTI CANVAS THE RIGHT SIZE */
+window.addEventListener('resize', () => {
+  const canvas = document.getElementById('confetti');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
 </script>
+
 </body>
 </html>
